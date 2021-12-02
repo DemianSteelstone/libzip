@@ -1090,7 +1090,7 @@
 		4BFF2B511FE12FCA006EF3F3 /* can_clone_file */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = can_clone_file; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFF2B541FE13033006EF3F3 /* can_clone_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = can_clone_file.c; sourceTree = "<group>"; };
 		5E92B9162759174600BFB5B2 /* ZipIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZipIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E92B9172759174600BFB5B2 /* libzip copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "libzip copy-Info.plist"; path = "/Users/demiansteelstone/Documents/WorkGit/DownloaderPlus/DownloaderPlus/External/Archive/Zip/developer-xcode/libzip copy-Info.plist"; sourceTree = "<absolute>"; };
+		5E92B9172759174600BFB5B2 /* ZipIosInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ZipIosInfo.plist; path = "/Users/demiansteelstone/Documents/WorkGit/DownloaderPlus/DownloaderPlus/External/Archive/Zip/developer-xcode/ZipIosInfo.plist"; sourceTree = "<absolute>"; };
 		736ED9B71E3D688C00C36873 /* zip_file_set_encryption.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_file_set_encryption.c; sourceTree = "<group>"; };
 		736ED9B81E3D688C00C36873 /* zip_random_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_random_unix.c; sourceTree = "<group>"; };
 		736ED9B91E3D688C00C36873 /* zip_source_winzip_aes_decode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip_source_winzip_aes_decode.c; sourceTree = "<group>"; };
@@ -1565,7 +1565,6 @@
 				4B28A9EA15BACBE100D0C17D /* man */,
 				4BDC71CA15B181DA00236D3C /* Frameworks */,
 				4BDC71C915B181DA00236D3C /* Products */,
-				5E92B9172759174600BFB5B2 /* libzip copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 			tabWidth = 8;
@@ -1761,6 +1760,7 @@
 		4BDC71E415B182B200236D3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E92B9172759174600BFB5B2 /* ZipIosInfo.plist */,
 				3D77B86517009AA1000A5794 /* extract-version.sh */,
 				4B01D73D15B2FB6B002D5007 /* Info.plist */,
 			);
@@ -2066,6 +2066,7 @@
 				4B01D72815B2F5A2002D5007 /* command line tools */,
 				4BCF6A681C3BDDD500F036E9 /* examples */,
 				4BACD5A715BC2D8200920691 /* test programs */,
+				5E92B8862759174600BFB5B2 /* ZipIos */,
 				4B01D68A15B2F3F1002D5007 /* libzip */,
 				4B01D6FC15B2F4B1002D5007 /* zipmerge */,
 				4B01D70A15B2F4EB002D5007 /* zipcmp */,
@@ -2078,7 +2079,6 @@
 				4BACD58815BC2CEA00920691 /* ziptool */,
 				4BACD64515BC301300920691 /* tryopen */,
 				4B51DDB41FDAE20A00C5CA85 /* ziptool_regress */,
-				5E92B8862759174600BFB5B2 /* ZipIos */,
 			);
 		};
 /* End PBXProject section */
@@ -2139,7 +2139,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"";
+			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"\n";
 		};
 		5E92B9112759174600BFB5B2 /* Copy Version Info from config.h */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2153,7 +2153,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./extract-version.sh \"config.h\" \"Info.plist\" ";
+			shellScript = "#./extract-version.sh \"config.h\" \"ZipIosInfo.plist\" \n";
 		};
 		5E92B9122759174600BFB5B2 /* Fix zipconf.h include. */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2167,7 +2167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"";
+			shellScript = "sed \"s,<zipconf.h>,<$EXECUTABLE_NAME/zipconf.h>,\" ../lib/zip.h > \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Headers/zip.h\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3168,6 +3168,7 @@
 		5E92B9142759174600BFB5B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -3184,13 +3185,13 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
-				INFOPLIST_FILE = "libzip copy-Info.plist";
+				INFOPLIST_FILE = ZipIosInfo.plist;
 				INSTALL_PATH = "@rpath";
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/zstd/1.4.9/lib;
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.nih.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				VERSION_INFO_BUILDER = "";
 				VERSION_INFO_FILE = "";
 				WRAPPER_EXTENSION = framework;
@@ -3200,6 +3201,7 @@
 		5E92B9152759174600BFB5B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -3217,13 +3219,13 @@
 				GCC_WARN_PEDANTIC = YES;
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
-				INFOPLIST_FILE = "libzip copy-Info.plist";
+				INFOPLIST_FILE = ZipIosInfo.plist;
 				INSTALL_PATH = "@rpath";
-				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/zstd/1.4.9/lib;
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.nih.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				VERSION_INFO_BUILDER = "";
 				VERSION_INFO_FILE = "";
 				WRAPPER_EXTENSION = framework;
