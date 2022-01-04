@@ -349,7 +349,6 @@
 		5E92B8FE2759174600BFB5B2 /* zip_utf-8.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC724315B1B25E00236D3C /* zip_utf-8.c */; };
 		5E92B9012759174600BFB5B2 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE92AA620345E3800509BC8 /* libbz2.tbd */; };
 		5E92B9022759174600BFB5B2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B01D70815B2F4CF002D5007 /* libz.dylib */; };
-		5E92B9032759174600BFB5B2 /* liblzma.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B3FAE812385C79200192D6A /* liblzma.5.dylib */; };
 		5E92B9052759174600BFB5B2 /* zip_crypto_commoncrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE92AB0203597D700509BC8 /* zip_crypto_commoncrypto.h */; };
 		5E92B9062759174600BFB5B2 /* zip_source_file_stdio.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B93995824631B3E00AEBDA4 /* zip_source_file_stdio.h */; };
 		5E92B9072759174600BFB5B2 /* zip_crypto_openssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE92AAA20346B1900509BC8 /* zip_crypto_openssl.h */; };
@@ -1212,7 +1211,6 @@
 			files = (
 				5E92B9012759174600BFB5B2 /* libbz2.tbd in Frameworks */,
 				5E92B9022759174600BFB5B2 /* libz.dylib in Frameworks */,
-				5E92B9032759174600BFB5B2 /* liblzma.5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
