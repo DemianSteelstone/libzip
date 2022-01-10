@@ -234,7 +234,6 @@
 		5E92B88A2759174600BFB5B2 /* zip_add_dir.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC71F115B1B25E00236D3C /* zip_add_dir.c */; };
 		5E92B88C2759174600BFB5B2 /* zip_file_set_external_attributes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B97204E188EBE85002FAFAD /* zip_file_set_external_attributes.c */; };
 		5E92B88D2759174600BFB5B2 /* zip_source_compress.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B0454B61E8E3DF7002FA1F9 /* zip_source_compress.c */; };
-		5E92B88E2759174600BFB5B2 /* zip_algorithm_xz.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B3FAE7F2385C5A300192D6A /* zip_algorithm_xz.c */; };
 		5E92B88F2759174600BFB5B2 /* zip_source_begin_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF301A199A2F820064207B /* zip_source_begin_write.c */; };
 		5E92B8902759174600BFB5B2 /* zip_add_entry.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC71F215B1B25E00236D3C /* zip_add_entry.c */; };
 		5E92B8912759174600BFB5B2 /* zip_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC71F315B1B25E00236D3C /* zip_add.c */; };
@@ -2396,7 +2395,6 @@
 				5E92B88A2759174600BFB5B2 /* zip_add_dir.c in Sources */,
 				5E92B88C2759174600BFB5B2 /* zip_file_set_external_attributes.c in Sources */,
 				5E92B88D2759174600BFB5B2 /* zip_source_compress.c in Sources */,
-				5E92B88E2759174600BFB5B2 /* zip_algorithm_xz.c in Sources */,
 				5E92B88F2759174600BFB5B2 /* zip_source_begin_write.c in Sources */,
 				5E92B8902759174600BFB5B2 /* zip_add_entry.c in Sources */,
 				5E92B8912759174600BFB5B2 /* zip_add.c in Sources */,
